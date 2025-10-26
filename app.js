@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import ejs from "ejs";
 import expressLayouts from "express-ejs-layouts";
@@ -7,6 +8,7 @@ import Joke from "./models/Joke.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 
+const PORT = process.env.PORT || 3000;
 //Installation d'Express
 const app = express();
 
@@ -53,8 +55,8 @@ app.set("layout", "layout");
 //Connexion à la database
 async function start() {
   await sequelize.sync();
-  app.listen(3000, () => {
-    console.log("Serveur démarré sur le port 3000");
+  app.listen(PORT, () => {
+    console.log(`Serveur démarré sur le port ${PORT}`);
   });
 }
 
