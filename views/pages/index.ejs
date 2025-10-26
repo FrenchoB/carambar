@@ -1,0 +1,23 @@
+    <div class="background">
+      <div>
+        <h1>Les meilleurs blagues Carambar</h1>
+      </div>
+    </div>
+    <div class="container mt-4 d-flex justify-content-center flex-column align-items-center gap-5">
+      <div class="d-flex justify-content-around gap-5">
+        <button type="button" class="btn btn-dark" id="btnJokes" data-bs-toggle="modal" data-bs-target="#jokesModal">Voir toutes nos meilleures blagues</button>
+        <button type="button" class="btn btn-primary" id="btnOneJoke" data-bs-toggle="modal" data-bs-target="#randomJokeModal">Sélectionne ta blague</button>
+        <button type="button" class="btn btn-success" id="btnAddJoke" data-bs-toggle="modal" data-bs-target="#modalAddJokes">Ajoute ta blague à l'édifice</button>
+      </div>
+      <div class="d-flex justify-content-center align-items-center flex-column gap-2">
+        <label for="numberJoke">Rechercher votre blague par son numéro :</label>
+        <input type="number" id="numberJoke" placeholder="Entrez un numéro">
+        <button type="button" class="btn btn-danger" id="btnSearchJoke">Rechercher</button>
+      </div>
+    </div>
+
+
+    <%- include('../components/modalAddJokes')%>
+    <%- include('../components/modalJokes')%>
+    <%- include('../components/modalRandomJoke')%>
+    <%- include('../components/modalSearchJoke')%>

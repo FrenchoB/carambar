@@ -1,0 +1,24 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://imgs.search.brave.com/B63MsK_RlgqzwsR79YcjEq0p9N2-6imXe8GE6gXdyHE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTY0/Mjc0NDQyL2ZyL3Bo/b3RvL2EtcGhvdG8t/dGFrZW4taW4tcGFy/aXMtc2hvd3MtZnJl/bmNoLWNhcmFtZWwt/Y2FuZGllcy1jYXJh/bWJhci1vbi1tYXJj/aC0yMi0yMDEzLWlu/LXBhcmlzLWFmdGVy/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1zbXNkVmlWc2xi/WHI3MVgtb2lSQmVR/SFR0aW9GNGI0WDI3/Y0wzUG0xUjRVPQ);
+}
+
+.background div {
+  text-align: center;
+  background-color: rgba(219, 211, 102, 0.8);
+  width: 50%;
+  border-radius: 20px;
+}
+
+.modal-body div label {
+  margin-bottom: 10px;
+}
+.modal-body div input {
+  width: 100%;
+  margin-bottom: 20px;
+}
