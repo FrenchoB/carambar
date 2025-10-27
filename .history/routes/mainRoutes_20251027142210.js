@@ -38,65 +38,6 @@ mainRouter.get("/", mainController.index);
 
 /**
  * @swagger
- * /api/random-joke:
- *   get:
- *     summary: Récupère une blague aléatoire
- *     description: Retourne une blague Carambar aléatoire parmi toutes les blagues disponibles dans la base de données
- *     tags:
- *       - Blagues
- *     responses:
- *       200:
- *         description: Blague aléatoire récupérée avec succès
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 id:
- *                   type: integer
- *                   description: Identifiant unique de la blague
- *                   example: 42
- *                 question:
- *                   type: string
- *                   description: Question de la blague
- *                   example: "Qu'est-ce qu'un crocodile qui surveille une piscine ?"
- *                 answer:
- *                   type: string
- *                   description: Réponse de la blague
- *                   example: "Un Lacoste de sauvetage !"
- *                 createdAt:
- *                   type: string
- *                   format: date-time
- *                   description: Date de création de la blague
- *                 updatedAt:
- *                   type: string
- *                   format: date-time
- *                   description: Date de dernière modification
- *       404:
- *         description: Aucune blague disponible dans la base de données
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 error:
- *                   type: string
- *                   example: "Aucune blague disponible"
- *       500:
- *         description: Erreur serveur lors de la récupération de la blague
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 error:
- *                   type: string
- *                   example: "Erreur lors de la récupération de la blague aléatoire."
- */
-mainRouter.get('/random-joke', mainController.getRandomJoke)
-
-/**
- * @swagger
  * /api/v1/addBlague:
  *   post:
  *     summary: Crée une nouvelle blague

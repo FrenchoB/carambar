@@ -73,38 +73,3 @@
   }
   
 });
-
-//Modal random blague
-document.addEventListener('DOMContentLoaded', async function() {
-  const randomJokeModal = document.getElementById('randomJokeModal');
-  const jokeContent = document.getElementById('randomJokeContent');
-  const btnNewRandomJoke = document.getElementById('btnNewRandomJoke');
-  
-  try {
-      const response = await fetch('/api/v1/random-joke');
-      const joke = await response.json();
-      
-      if (response.ok) {
-        jokeContent.innerHTML = `
-          <p><strong>Question:</strong> ${joke.question}</p>
-          <p><strong>Réponse:</strong> ${joke.answer}</p>
-        `;
-      } else {
-        jokeContent.innerHTML = `<p class="text-muted">Aucune blague disponible.</p>`;
-      }
-    } catch (error) {
-      console.error('Erreur:', error);
-      jokeContent.innerHTML = `<p class="text-danger">Erreur lors du chargement de la blague.</p>`;
-    }
-
-  
-  // Charger une blague lors de l'ouverture du modal
-  randomJokeModal.addEventListener('show.bs.modal', function () {
-    loadRandomJoke();
-  });
-  
-  // Charger une nouvelle blague lors du clic sur le bouton
-  btnNewRandomJoke.addEventListener('click', function() {
-    loadRandomJoke();
-  });
-});

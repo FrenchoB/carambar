@@ -5,15 +5,15 @@
         <h5 class="modal-title">Ta blague Carambar</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" id="randomJokeContent">
-        <div class="text-center">
-          <div class="spinner-border" role="status">
-            <span class="visually-hidden">Chargement...</span>
-          </div>
-        </div>
+      <div class="modal-body">
+        <% if (randomJoke) { %>
+          <p><strong>Question:</strong> <%= randomJoke.question %></p>
+          <p><strong>Réponse:</strong> <%= randomJoke.answer %></p>
+        <% } else { %>
+          <p class="text-muted">Aucune blague disponible.</p>
+        <% } %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="btnNewRandomJoke">Nouvelle blague</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
       </div>
     </div>
